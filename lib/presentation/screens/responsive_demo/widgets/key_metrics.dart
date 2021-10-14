@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_responsive_ui_example/presentation/widgets/key_metric_card/key_metric_card.dart';
 import 'package:flutter_responsive_ui_example/presentation/widgets/section_title/section_title.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 
 class KeyMetrics extends StatelessWidget {
   const KeyMetrics({
@@ -16,7 +17,7 @@ class KeyMetrics extends StatelessWidget {
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
             childAspectRatio: 300.0 / 100.0,
-            crossAxisCount: 3,
+            crossAxisCount: getValueForScreenType<int>(context: context, mobile: 1, desktop: 3),
             children: [
               KeyMetricCard(
                   backgroundColor: Colors.green.shade200,
