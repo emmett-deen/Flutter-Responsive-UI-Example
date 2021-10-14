@@ -8,7 +8,6 @@ class NavigationDrawer extends StatelessWidget {
     return Drawer(
       child: Column(
         children: [
-          const DrawerHeader(child: Center(child: Text('Responsive Demo'))),
           ListTile(
             title: const Text('Home'),
             onTap: () {
